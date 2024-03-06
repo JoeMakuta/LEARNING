@@ -1,0 +1,15 @@
+# Files to ignore in the whole learning project.
+
+node_modules
+
+# Environment variables files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build files
+.next/
+build
+dist/
