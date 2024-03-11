@@ -1,0 +1,25 @@
+{
+  "name": "github_username_checker",
+  "version": "1.0.0",
+  "description": "This is a package that checks if the username is linked to a github account.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoeMakuta/LEARNING.git"
+  },
+  "keywords": [
+    "github",
+    "git",
+    "account",
+    "username"
+  ],
+  "author": "JoeMakuta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoeMakuta/LEARNING/issues"
+  },
+  "homepage": "https://github.com/JoeMakuta/LEARNING#readme"
+}
