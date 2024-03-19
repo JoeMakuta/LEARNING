@@ -1,0 +1,90 @@
+.char-input-container {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  min-height: 85vh;
+  width: 85vw;
+  max-width: 675px;
+  justify-content: center;
+}
+
+.char-input-header {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.char-input-paragraph {
+  margin: 0px 0px 20px 0px;
+  transition: opacity 0.75s ease-in-out;
+  opacity: 1;
+}
+
+textarea {
+  resize: vertical;
+  max-height: 200px;
+  min-height: 100px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  border: 3px solid #000;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: box-shadow 250ms, transform 0.5s ease-in-out;
+}
+
+.dark-mode textarea {
+  background: #000;
+  color: aliceblue;
+  border: 3px solid #ffffff;
+}
+
+.dark-mode textarea:hover,
+textarea:focus {
+  box-shadow: 5px 5px 1px 1px rgb(255, 255, 255);
+  outline: none;
+}
+
+textarea:hover,
+textarea:focus {
+  box-shadow: 5px 5px 1px 1px black;
+  outline: none;
+}
+
+#character-count {
+  text-align: right;
+  color: #666;
+  justify-content: flex-end;
+  transition: opacity 0.5s;
+  opacity: 1;
+  margin-top: -5px;
+}
+
+.character-text {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.character-number {
+  transition: transform 0.5s;
+  font-weight: bold;
+}
+
+.char-input-paragraph.hide {
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .char-input-header,
+  .char-input-paragraph,
+  textarea,
+  #character-count,
+  .character-text,
+  .character-number,
+  .char-input-paragraph.hide {
+    transition: none !important;
+  }
+}
