@@ -1,26 +1,17 @@
 import React, { useState } from "react";
 import "./App.css";
+import Form from "./components/form/form";
+import Theme from "./components/theme/theme";
+import { ThemeContext } from "./context/index";
 
 function App() {
   const [theme, setTheme] = useState("light");
   return (
-    <main className={theme == "light" ? "light-mode" : "dark-mode"}>
-      <h1>DEMO : REACT_CONTEXT</h1>
-      <button
-        onClick={() => {
-          setTheme("light");
-        }}
-      >
-        Light
-      </button>
-      <button
-        onClick={() => {
-          setTheme("dark");
-        }}
-      >
-        Dark
-      </button>
-    </main>
+    <ThemeContext.Provider value={[theme, setTheme]}>
+      <main className={theme == "light" ? "light-mode" : "dark-mode"}>
+        <Form />
+      </main>
+    </ThemeContext.Provider>
   );
 }
 
